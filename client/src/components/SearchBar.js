@@ -1,5 +1,10 @@
 import React from 'react';
 
 export const SearchBar = () => {
-  return <div></div>;
+  return (
+    <div>
+      <input placeholder="Enter the name of a movie,actor or TV show"></input>
+      <button>SEARCH</button>
+    </div>
+  );
 };
