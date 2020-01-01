@@ -13,4 +13,24 @@ const getLatestsMovies = async () => {
   }
 };
 
-module.exports = { getLatestsMovies };
+const getMovieInfoByID = async movieID => {
+  try {
+    return await axios.get(`${URL}/movie/${movieID}`, {
+      params: { api_key: auth.api_key },
+    });
+  } catch (e) {
+    return e;
+  }
+};
+
+const getMovieCast = async movieID => {
+  try {
+    return await axios.get(`${URL}/movie/${movieID}/credits`, {
+      params: { api_key: auth.api_key },
+    });
+  } catch (e) {
+    return e;
+  }
+};
+
+module.exports = { getLatestsMovies, getMovieInfoByID, getMovieCast };

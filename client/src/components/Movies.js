@@ -5,8 +5,7 @@ export const Movies = ({ moviesList }) => {
   console.log(moviesList);
   return (
     <div>
-      {moviesList}
-      {/* {moviesList.map(({ id, backdrop_path, title }) => (
+      {moviesList.map(({ id, backdrop_path, title }) => (
         <div key={id}>
           <Link to={`/movie/${id}`}>
             <div>
@@ -22,7 +21,7 @@ export const Movies = ({ moviesList }) => {
             <div>{title}</div>
           </Link>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 };
