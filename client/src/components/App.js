@@ -25,7 +25,6 @@ export class App extends React.Component {
     const {
       data: { results: moviesList },
     } = await getLatestsMovies();
-    console.log(moviesList);
     this.setState({ moviesList });
   };
 
@@ -47,7 +46,11 @@ export class App extends React.Component {
               path="/movie/:movieID"
               render={props => <MoviePage {...props} />}
             />
-            <Route exact path="/actor" component={ActorPage} />
+            <Route
+              exact
+              path="/actor/:actorID"
+              render={props => <ActorPage {...props} />}
+            />
           </div>
         </BrowserRouter>
       </div>

@@ -23,3 +23,19 @@ export const getMovieCast = async movieID => {
     console.error('An error happened');
   }
 };
+
+export const getActorInfosByID = async actorID => {
+  try {
+    return await axios.get(`/actor/${actorID}`);
+  } catch (e) {
+    console.error('An error happened');
+  }
+};
+
+export const getActorFilmography = async actorID => {
+  try {
+    return await axios.get(`/actor/${actorID}/credits`);
+  } catch (e) {
+    console.error('An error happened');
+  }
+};
